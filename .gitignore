@@ -1,0 +1,53 @@
+### Build outputs ###
+/build/
+/out/
+/target/
+
+### Gradle ###
+.gradle/
+/.gradle-cache/
+/gradle-app.setting
+!gradle-wrapper.jar   # keep the wrapper JAR
+!gradlew
+!gradlew.bat
+
+### IntelliJ IDEA ###
+.idea/
+/*.iml
+*.iws
+*.ipr
+
+### VS Code ###
+.vscode/
+
+### Logs ###
+*.log
+*.log.*
+/logs/
+
+### OS-specific ###
+.DS_Store
+Thumbs.db
+
+### Java ###
+*.class
+hs_err_pid*
+replay_pid*
+
+### Avro generated sources ###
+**/build/generated*/    # Avro, annotation processors, etc.
+
+### Docker ###
+/docker-data/
+/pgdata/
+/kafka-data/
+/zookeeper-data/
+
+### Local environment ###
+.env
+*.local
+*.tmp
+
+### Test coverage ###
+/coverage/
+/jacoco.exec
