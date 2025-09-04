@@ -1,0 +1,15 @@
+server:
+  port: 8082
+
+spring:
+  kafka:
+    bootstrap-servers: localhost:9092
+    properties:
+      schema.registry.url: http://localhost:8081
+      specific.avro.reader: true
+    streams:
+      application-id: fintech-streaming
+      auto-startup: true
+      auto-offset-reset: earliest
+      properties:
+        default.key.serde: org.apache.kafka.common.serialization.Serdes$StringSerde

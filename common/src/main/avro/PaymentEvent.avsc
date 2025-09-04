@@ -1,0 +1,12 @@
+{
+  "type": "record",
+  "name": "PaymentEvent",
+  "namespace": "com.siddharthbaichoo.avro",
+  "fields": [
+    { "name": "id",       "type": "string" },
+    { "name": "amount",   "type": "long"   },
+    { "name": "currency", "type": "string" },
+    { "name": "status",   "type": "string" },
+    { "name": "ts",       "type": { "type": "long", "logicalType": "timestamp-millis" } }
+  ]
+}
