@@ -1,23 +1,28 @@
-### Build outputs ###
-/build/
-/out/
-/target/
-
 ### Gradle ###
 .gradle/
-/.gradle-cache/
-/gradle-app.setting
-!gradle-wrapper.jar   # keep the wrapper JAR
+**/build/
+**/out/
+**/target/
+
+# Ignore all JARs and class files
+*.jar
+*.war
+*.ear
+*.class
+
+# Keep wrapper scripts & wrapper jar
 !gradlew
 !gradlew.bat
+!gradle-wrapper.jar
 
-### IntelliJ IDEA ###
+### IDEs ###
+# IntelliJ IDEA
 .idea/
-/*.iml
+*.iml
 *.iws
 *.ipr
 
-### VS Code ###
+# VS Code
 .vscode/
 
 ### Logs ###
@@ -25,25 +30,24 @@
 *.log.*
 /logs/
 
-### OS-specific ###
+### OS files ###
 .DS_Store
 Thumbs.db
 
-### Java ###
-*.class
+### Java crash dumps ###
 hs_err_pid*
 replay_pid*
 
 ### Avro generated sources ###
-**/build/generated*/    # Avro, annotation processors, etc.
+**/build/generated*/
 
-### Docker ###
-/docker-data/
-/pgdata/
-/kafka-data/
-/zookeeper-data/
+### Docker volumes (Kafka, Postgres, etc.) ###
+pgdata/
+kafka-data/
+zookeeper-data/
+docker-data/
 
-### Local environment ###
+### Env / secrets ###
 .env
 *.local
 *.tmp
